@@ -47,7 +47,8 @@ public class HomePage {
         acceptCookiesIfPresent();
 
         By careersLink = By.xpath(
-                "//div[@id='text-a63751913f']");
+                "//header//a[@href='https://careers.labcorp.com/global/en' and @target='_self' and normalize-space()='Careers']"
+        );
         WebElement link = wait.until(ExpectedConditions.elementToBeClickable(careersLink));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", link);
         link.click();
